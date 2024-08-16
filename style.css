@@ -106,8 +106,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked ~ .menu-content {
-    right:0;
-    visibility:visible;
+    left:0;
 }
 
 .grid-container {
