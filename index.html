@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Burger Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <p class="branding">showtime</p>
+            <h1 class="main-heading">Corporate Solutions</h1>
+            <h2 style="display: flex;">Empowering your business with cutting-edge solutions.</h1>
+            
+        </div>
+        <div style="position: absolute; top:40px;right:70px;">
+            <a style="color:white;text-decoration: none;font-size: 1rem;" href="#modal">Signup/Login</a></div>
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger-icon">
+            &#9776;
+        </label>
+        <div class="menu-content">
+            <h2 style="color: black;">Our Services</h2>
+            <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="./images/consulting.jpg" alt="Service 1" width="100%" height="auto">
+                        <h3>Consulting</h3>
+                        <p>Expert advice to optimize your business strategies and operations.</p>
+                        <a href="#">click to know more</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/solution.jpg" alt="Service 2" width="100%" height="auto">
+                        <h3>Technology Solutions</h3>
+                        <p>Implement cutting-edge technology to streamline your business processes.</p>
+                        <a href="#">click to know more</a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="./images/support.jpg" alt="Service 3" width="100%" height="auto">
+                        <h3>Support</h3>
+                        <p>Comprehensive support to ensure your business runs smoothly.</p>
+                        <a href="#">click to know more</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close"><a style="text-decoration: none;" href="#">×</a></span>
+            <div class="modal-header">
+                <div>
+                    <!-- <a style="background-color:rgb(72, 223, 140); "  href="#signup" >Sign Up</a> -->
+                    <button style="background-color:rgb(72, 223, 140); " >Sign Up</button>
+                </div>
+                <div>
+                    <!-- <a style="background-color:gray;" href="#login" >Login</a> -->
+                    <button style="background-color:gray;" >Login</button>
+                </div>
+            </div>
+            <div class="content">
+                <h2 style="font-family: 'Times New Roman', Times, serif; color: white; font-weight: lighter;">Sign Up for Free</h2>
+                <form>
+                    <input type="text" id="name" class="large" placeholder="First Name* " >
+                    <input type="text" id="name" class="large" placeholder="Last Name*"><br><br>
+                    <input type="email" id="email" class="large" placeholder="Email Address*"><br><br>
+                    <input type="password" class="large" id="password" placeholder="Set A Password*"><br><br>
+                </form>
+                <button class="signupbutton" >GET  STARTED</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

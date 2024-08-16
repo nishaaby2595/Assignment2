@@ -1,0 +1,262 @@
+/* General Styles */
+body, html {
+    background-image: url('./images/bg1.jpg');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+/* First Page Styles */
+ .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    position: relative;
+    color: white;
+    text-align: left;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5%; /* Space from the left */
+}
+
+.branding {
+    font-size: 1rem;
+    margin-bottom: 30rem;
+    color: #ddd;
+}
+.main-heading {
+    font-size: 3rem; /* Responsive font size based on viewport width */
+    font-weight: bolder;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+/* Sub Heading */
+.sub-heading {
+    font-size: 1.5rem; /* Responsive font size based on viewport width */
+    font-weight: normal;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+/* .header>p{
+    padding-left: 10%;
+    color: rgb(221, 232, 241); 
+    position: relative;
+    opacity: 45%;
+} */
+
+/* .header h1:first-of-type {
+    padding-left: 10%;
+    font-size: 4rem;
+    margin:auto;
+    margin-bottom: 20px;
+}
+.header h1:last-of-type {
+    padding-left: 10%; 
+    font-size: 2rem;
+} */
+
+.header p a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.burger-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 1000;
+}
+  
+input[type="checkbox"] {
+    display: none;
+}
+
+.menu-content {
+    position: fixed;
+    top: 0;
+    right: -1900px;
+    width: 100%;
+    height: 100%;
+    background: rgba(217, 192, 192, 0.9);
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+input[type="checkbox"]:checked ~ .menu-content {
+    right: 0;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto; /* Automatically adjust rows based on content */
+   gap: 30px; /* Space between grid items */
+   justify-content: center; /* Center items horizontally */
+   align-content: center; /* Center items vertically */
+   min-height: 80vh; /* Ensure container takes full viewport height */
+   padding: 10px; /* Add padding around the grid container */
+}
+
+.grid-item {
+    background-color: #d9e8e8;
+    color: black;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    width: 80%;
+    text-align: center;
+} 
+.grid-item:hover{
+    transform: scale(1.05);
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal:target {
+    display: block; /* Show the modal when it is targeted */
+}
+
+.modal-content {
+    background-color: #0f2326;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 400px;
+    max-width: 600px;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    gap:0;
+    justify-content:center;
+    align-items: center;
+    margin-top: 5%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+/* .modal-header a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    padding-right: 40px;
+    padding-left: 40px; 
+    padding-top:10px;
+    padding-bottom:10px;
+    height: auto;
+    border-radius: 1px;
+} */
+
+.modal-header button{
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    padding-right: 60px;
+    padding-left: 60px; 
+    padding-top:10px;
+    padding-bottom:10px;
+    height: auto;
+    border:none;
+}
+
+.modal-header button:hover{
+    transform: scale(1.05);
+}
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid rgb(113, 70, 70);
+    border-radius: 2px;
+    background-color: rgb(72, 223, 140);
+    text-align: center;
+    width: 3%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(129, 95, 95);
+    text-decoration: none;
+}
+
+.content{
+    text-align: center;
+    align-items: center;
+}
+
+input[type="text"].large{
+    width: calc(43% - 10px);
+    margin-bottom: 2%;
+    padding: 5px;
+    color: azure;
+    background-color: #d3dbd30e;
+    border: 1px solid rgb(224, 211, 211);
+}
+input[type="email"].large,
+input[type="password"].large {
+    width: calc(90% - 27px);
+    margin-bottom: 2%;
+    padding: 5px;
+    color: azure;
+    background-color: #d3dbd30e;
+    border: 1px solid rgb(233, 220, 220);
+}
+
+.signupbutton{
+    background-color:rgb(72, 223, 140); 
+    color: rgb(255, 250, 250); 
+    font-size: 1.5rem;
+    font-weight: bolder;
+    width: calc(90% - 27px);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin:0;
+    border: none;
+
+}
+.signupbutton:hover{
+    transform: scale(1.05);
+}
